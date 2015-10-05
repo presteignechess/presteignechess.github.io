@@ -1,0 +1,25 @@
+/*------------------------------------*\
+    #CONTAINERS
+\*------------------------------------*/
+
+.main-container {
+    max-width: 1280px;
+    margin: 1.5em auto;
+    padding: 3em 2em 2em;
+    background-color: $black;
+    background-image: url(../img/chessking.svg);
+    background-repeat: no-repeat;
+    background-position: right 50px;
+    background-size: 530px;
+
+    @include breakpoint($tab) {
+        padding: 3em 3em 3em;
+        background-position: right top;
+        background-size: 700px;
+    }
+
+        @include breakpoint($desk) {
+            padding: 3em 3em 3em;
+            background-size: auto;
+        }
+}

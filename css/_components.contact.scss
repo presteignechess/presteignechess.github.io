@@ -1,0 +1,16 @@
+/*------------------------------------*\
+    #CONTACT
+\*------------------------------------*/
+
+.contact {
+    margin-top: 6em;
+
+
+    @include breakpoint($tab) {
+        @include font-size(22px);
+    }
+
+        @include breakpoint($desk) {
+            @include font-size(24px);
+        }
+}

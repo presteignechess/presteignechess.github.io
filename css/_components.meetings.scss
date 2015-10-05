@@ -1,0 +1,17 @@
+/*------------------------------------*\
+    #MEETINGS
+\*------------------------------------*/
+
+.info--meetings {
+    @include font-size(20px);
+    position: absolute;
+         top: 0;
+
+        @include breakpoint($tab) {
+            @include font-size(24px);
+        }
+
+            @include breakpoint($desk) {
+                @include font-size(30px);
+            }
+}

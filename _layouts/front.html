@@ -1,0 +1,34 @@
+---
+layout: default
+---
+
+<div class="main-container">
+    <div class="main wrapper clearfix">
+
+        <section>
+          <h1 class="club-name">{{ page.clubname }}</h1>
+          <div class="info--meetings standout">
+            {{ page.weekday }} at {{ page.time }}, {{ page.venue }}
+          </div>
+
+          <p>
+            {{ content }}
+          </p>
+
+          <div class="contact">
+            <div class="contact--leadin">
+              For more information, contact {{ page.contactname }}:
+            </div>
+            <div class="contact--email standout">
+              {{ page.contactemail }}
+            </div>
+            <div class="contact--phone standout">
+              {{ page.contactphone }}
+            </div>
+          </div>
+
+
+        </section>
+
+    </div> <!-- #main -->
+</div> <!-- #main-container -->
