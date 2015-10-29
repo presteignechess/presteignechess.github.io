@@ -2,12 +2,11 @@
 layout: default
 ---
 
-<div class="main-container">
-    <div class="main wrapper clearfix">
+
 
         <section>
           <h1 class="club-name">{{ page.title }}</h1>
-          <div class="info--meetings standout">
+          <div class="meetings standout">
             {{ page.weekday }} at {{ page.time }}, {{ page.venue }}
           </div>
 
@@ -16,13 +15,13 @@ layout: default
           </p>
 
           <div class="contact">
-            <div class="contact--leadin">
+            <div class="contact__leadin">
               For more information, contact {{ page.contactname }}:
             </div>
-            <div class="contact--email standout">
+            <div class="contact__email standout">
               {{ page.contactemail }}
             </div>
-            <div class="contact--phone standout">
+            <div class="contact__phone standout">
               {{ page.contactphone }}
             </div>
           </div>
@@ -30,5 +29,29 @@ layout: default
 
         </section>
 
-    </div> <!-- #main -->
-</div> <!-- #main-container -->
+        <section class="news" id="section:news">
+
+            <h2>Club News</h2>
+            <ul>
+            {% for post in paginator.posts %}
+
+                <li class="post">
+
+                    <h3>{{ post.title }}</h3>
+
+                    <div class="content">
+                        {{ post.content }}
+                    </div>
+                    <p class="author">
+                        <span class="date">{{ post.date }}</span>
+                        <a href="{{ post.url }}">Permalink</a>
+                    </p>
+
+                </li>
+            </ul>
+            {% endfor %}
+
+        </section>
+
+
+

@@ -4,11 +4,13 @@
 
 h1 {
 
+}
+
+.club-name {
     @include font-size(52px);
     line-height: 1.2;
     margin: 6.5em 0 0.2em;
     letter-spacing: -2px;
-
 
         @include breakpoint($tab) {
             @include font-size(72px);
@@ -20,5 +22,4 @@ h1 {
                 margin-top: 4.5em;
                 letter-spacing: -4px;
             }
-
 }
