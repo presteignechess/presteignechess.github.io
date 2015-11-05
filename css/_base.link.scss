@@ -1,0 +1,17 @@
+/*------------------------------------*\
+    #LINK
+\*------------------------------------*/
+
+a {
+    text-decoration: none;
+    color: $white;
+
+    &:hover {
+        color: $red;
+    }
+}
+
+.site-name a {
+    @include font-size(24px);
+    font-weight: bold;
+}
