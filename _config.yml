@@ -22,7 +22,7 @@ prose:
     - Gemfile.lock
     - apple-touch-icon.png
     - archive.html
-    - favivon.ico
+    - favicon.ico
     - google045fc8195b06d68a.html
     - robots.txt
     - _config.yml
