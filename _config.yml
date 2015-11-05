@@ -16,6 +16,16 @@ paginate: 5
 exclude: [templates, node_modules, bower_components, bower.json, gulpfile.js, Gemfile, Gemfile.lock]
 prose:
   ignore:
+    - .gitignore
+    - CNAME
+    - Gemfile
+    - Gemfile.lock
+    - apple-touch-icon.png
+    - archive.html
+    - favivon.ico
+    - google045fc8195b06d68a.html
+    - robots.txt
     - _config.yml
     - /_layouts
     - /_includes
+    - /css
