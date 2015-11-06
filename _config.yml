@@ -50,7 +50,7 @@ prose:
           options:
             - name: News
               value: news
-          help: "Add one or more categories here (News by default).""
+          help: "Add one or more categories here (News by default)."
           alterable: true
       - name: "published"
         field:
