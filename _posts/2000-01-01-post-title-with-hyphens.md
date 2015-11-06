@@ -1,7 +1,9 @@
 ---
+categories: News
 layout: post
 title: Placeholder
-date: 2000-01-01 19:15:48
-author: 
-categories: News
+date: "2015-11-06 09:28"
+author: null
+published: true
 ---
+
