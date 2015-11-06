@@ -1,8 +1,9 @@
 ---
 categories: News
 layout: post
-published: false
+published: true
 author: Kevin
 ---
+
 
 Another test post.
