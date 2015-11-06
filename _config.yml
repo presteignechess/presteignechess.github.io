@@ -31,19 +31,34 @@ prose:
     - /css
   metadata:
     _posts:
+      - name: "title"
+        field:
+          element: "text"
+          label: "title"
+          help: "You do not need to worry about hyphenating the title here."
       - name: "layout"
         field:
           element: "hidden"
           value: "post"
+      - name: "date"
+        field:
+          element: "text"
+          value: "CURRENT_DATETIME"
       - name: "categories"
         field:
-          element: "hidden"
-          value: "News"
+          element: "multiselect"
+          options:
+            - name: News
+              value: news
+          help: "Add one or more categories here (News by default).""
+          alterable: true
       - name: "published"
         field:
-          element: "hidden"
+          element: "checkbox"
           value: "true"
       - name: "author"
         field:
-          element: "hidden"
+          element: "text"
           value: "Kevin"
+          help:
+          type: text
