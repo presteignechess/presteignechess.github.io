@@ -38,4 +38,4 @@ prose:
       - name: "categories"
         field:
           element: "hidden"
-          value: News
+          value: "News"
