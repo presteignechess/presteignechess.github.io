@@ -52,7 +52,7 @@ prose:
             - name: News
               value: news
           label: "Categories"
-          help: "Add one or more categories here (News by default)."
+          help: "Add one or more categories here. Select from the dropdown or add new."
           alterable: true
       - name: "published"
         field:
