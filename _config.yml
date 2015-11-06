@@ -39,3 +39,7 @@ prose:
         field:
           element: "hidden"
           value: "News"
+      - name: "published"
+        field:
+          element: "hidden"
+          value: "true"
