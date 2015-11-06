@@ -43,6 +43,7 @@ prose:
       - name: "date"
         field:
           element: "text"
+          label: "Date"
           value: "CURRENT_DATETIME"
       - name: "categories"
         field:
@@ -50,15 +51,18 @@ prose:
           options:
             - name: News
               value: news
+          label: "Categories"
           help: "Add one or more categories here (News by default)."
           alterable: true
       - name: "published"
         field:
           element: "checkbox"
+          label: "Published"
           value: "true"
       - name: "author"
         field:
           element: "text"
+          label: "Author"
           value: "Kevin"
-          help:
+          help: Author Name (Kevin by default)
           type: text
