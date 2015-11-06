@@ -1,7 +1,8 @@
 ---
 categories: News
 layout: post
-published: false
+published: true
 ---
+
 
 Date to be confirmed.
