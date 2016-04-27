@@ -1,0 +1,64 @@
+/*------------------------------------*\
+    #ARTICLES
+\*------------------------------------*/
+
+article {
+    font-size: 18px;
+}
+
+.news-article {
+    margin-top: 2em;
+    padding: 1em 0;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.news-article + .news-article {
+    border-top: 1px solid $color-grey-lighter;
+}
+
+
+.news-article__content {
+    flex: 1 1 43em;
+}
+
+
+.news-article__title {
+    color: $color-grey-dark;
+    border: none;
+}
+
+.news-article__date {
+    color: $color-grey;
+    font-size: 0.85em;
+    line-height: 2;
+    margin-left: 0;
+    flex: 1 1 14em;
+}
+
+.news-article__author {
+    color: $color-grey;
+}
+
+.news-article__permalink:before{
+    content: " ";
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 1.1em 0;
+    width: 1.5em;
+    height: 1.5em;
+    background: url('../img/svg/queen-w.svg') no-repeat center;
+    background-size: contain;
+}
+
+/**
+ * Lists.
+ *
+ * Body lists should be indented.
+ */
+article ul,
+article ol {
+    padding-left: $spacing-unit;
+}

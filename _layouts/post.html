@@ -3,13 +3,23 @@ layout: default
 ---
 
 {% include header.html %}
-<section class="" data-ui-component="Main content">
 
-<time class="post__date" datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date: "%-d %B, %Y" }}</time>
-
-<h1>{{ page.title }}</h1>
-
-{{ content }}
-<em>{{ page.author }}</em>
-
+<section class="section-post" id="section:post">
+  <div class="wrapper">
+    <article class="news-article">
+      <div class="news-article__date">
+        <time datetime="{{ post.date | date: "%Y-%m-%d" }}">
+          <span>{{ page.date | date: "%A, %-d %B %Y" }}</span>
+        </time>
+        <a href="{{ post.url }}" class="news-article__permalink"></a>
+      </div>
+      <div class="news-article__content">
+        <h3 class="heading-news">{{ page.title }}</h3>
+        {{ content }}
+        <div class="news-article__author">
+          <em>{{ page.author}}</em>
+        </div>
+      </div>
+    </article>
+  </div>
 </section>

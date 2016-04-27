@@ -2,6 +2,25 @@
     #COLORS
 \*------------------------------------*/
 
-$white        : rgb(255,255,255);
-$red          : rgb(166, 0, 6);
-$black        : rgb(0, 0, 0);
+$color-white        : rgb(255,255,255);
+$color-red          : rgb(166, 0, 6);
+$color-grey         : hsl(0, 0%, 50%);
+$color-grey-mid     : hsl(0, 0%, 30%);
+$color-grey-dark    : hsl(0, 0%, 20%);
+$color-grey-light   : hsl(0, 0%, 75%);
+$color-grey-lighter : hsl(0, 0%, 90%);
+$color-black        : hsl(0, 0%, 10%);
+$color-blue         : rgb(13, 74, 135);
+$color-blue-accent  : rgb(0, 67, 135);
+$color-blue-dark    : rgba(0, 32, 64, 0.9);
+$color-gold         : rgb(65, 57, 21);
+
+$color-brown        : rgb(58, 36, 0);
+$color-brown-light  : rgb(135, 84, 0);
+
+$color-link         : $color-blue;
+$color-link-hover   : $color-brown;
+
+
+$color-text         : hsl(210, 56%, 18%);
+$color-text         : $color-grey-mid;

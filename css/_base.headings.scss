@@ -2,24 +2,24 @@
     #HEADINGS
 \*------------------------------------*/
 
-h1 {
+h1, h2, h3, h4, h5, h6 {
+    font-size: 1.2rem;
+    font-weight: normal;
+}
+
+.heading {
 
 }
 
-.club-name {
-    @include font-size(52px);
-    line-height: 1.2;
-    margin: 6.5em 0 0.2em;
-    letter-spacing: -2px;
+.heading-sub {
 
-        @include breakpoint($tab) {
-            @include font-size(72px);
-            margin-top:4.5em;
-        }
+}
 
-            @include breakpoint($desk) {
-                @include font-size(96px);
-                margin-top: 4.5em;
-                letter-spacing: -4px;
-            }
+.heading-section {
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.heading-news {
+    padding-right: 2em;
 }

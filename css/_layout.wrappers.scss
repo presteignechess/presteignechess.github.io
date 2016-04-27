@@ -3,6 +3,8 @@
 \*------------------------------------*/
 
 .wrapper {
-    position: relative;
-    overflow: hidden;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-right: $spacing-unit--small;
+    padding-left:  $spacing-unit--small;
 }

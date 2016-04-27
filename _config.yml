@@ -1,6 +1,9 @@
 # Site settings
 title: Presteigne Chess Club
 email: kevin.saull@mypostoffice.co.uk
+weekday: Mondays
+meetingtime: 7.30pm
+venue: "Radnorshire Arms"
 description: > # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
@@ -13,7 +16,7 @@ url: "http://presteignechess.club" # the base hostname & protocol for your site
 markdown: kramdown
 permalink: /:year/:month/:title
 paginate: 5
-exclude: [templates, node_modules, bower_components, bower.json, gulpfile.js, Gemfile, Gemfile.lock]
+exclude: [templates, node_modules, bower_components, bower.json, gulpfile.js, Gemfile, Gemfile.lock, unused_assets]
 prose:
   ignore:
     - .gitignore
@@ -28,6 +31,7 @@ prose:
     - _config.yml
     - /_layouts
     - /_includes
+    - /unused_assets
     - /css
   metadata:
     _posts:
@@ -66,3 +70,6 @@ prose:
           value: "Kevin"
           help: Author Name (Kevin by default)
           type: text
+
+# Gems
+gems: [jekyll-paginate]

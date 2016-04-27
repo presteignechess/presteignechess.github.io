@@ -6,6 +6,6 @@ layout: post
 date: 2015-11-06
 ---
 
-11th - 13th March 2016
+Venue Farmers Inn (to be confirmed)
 
-enquiries@castlechess.co.uk
+Date mid December to be discussed

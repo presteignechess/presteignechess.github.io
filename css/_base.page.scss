@@ -2,17 +2,24 @@
     #PAGE
 \*------------------------------------*/
 
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600);
+
 @-ms-viewport{
   width: device-width;
 }
 
 html {
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-family: "Source Sans Pro", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     font-weight: 300;
     font-size: $base-font-size;
+    color: $color-text;
     text-align: left;
     line-height: 1.6;
-    color: $white;
     box-sizing: border-box;
-    background-color: #080808;
+}
+
+.section-news,
+.section-archive,
+.section-post {
+    padding: 4em 0;
 }
