@@ -93,26 +93,28 @@ layout: default
         </article>
         {% endfor %}
 
-
+    {% if paginator.next_page or paginator.previous_page %}
     <ol class="pagination" data-ui-component="Pagination">
 
 
-      {% if paginator.next_page %}
+    {% if paginator.next_page %}
     <li>
-        <a href="/page{{paginator.next_page}}#section:news" class="pagination-link  pagination-link--older">Older articles</a>
+      <a href="/page{{paginator.next_page}}#section:news" class="pagination-link  pagination-link--older">Older articles</a>
     {% endif %}
 
     {% if paginator.previous_page %}
 
-            {% if paginator.previous_page == 1 %}
-            <li>
-                <a href="/#section:news" class="pagination-link  pagination-link--older">Newer articles</a>
-            {% else %}
-            <li>
-                <a href="/page{{paginator.previous_page}}#section:news" class="pagination-link  pagination-link--newer">Newer articles</a>
-            {% endif %}
+      {% if paginator.previous_page == 1 %}
+        <li>
+      <a href="/#section:news" class="pagination-link  pagination-link--older">Newer articles</a>
+
+      {% else %}
+        <li>
+          <a href="/page{{paginator.previous_page}}#section:news" class="pagination-link  pagination-link--newer">Newer articles</a>
+      {% endif %}
     {% endif %}
 
     </ol>
+    {% endif %}
   </div>
 </section>
