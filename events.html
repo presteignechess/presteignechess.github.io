@@ -1,0 +1,41 @@
+---
+layout: page
+title: Events
+page-class: page--archive
+section-class: section-events
+section-id: section:events
+permalink: /events/
+---
+
+<ul class="">
+  {% assign sorted = (site.events | sort: 'eventdate') %}
+  {% for item in sorted %}
+    {% capture nowtime %}{{'now' | date: '%s'}}{% endcapture %}
+    {% capture eventtime %}{{item.eventdate | date: '%s'}}{% endcapture %}
+    {% if nowtime < eventtime %}
+
+    <li class="">
+      <time class="" datetime="{{ item.eventdate | date: "%Y-%m-%d" }}">{{ item.eventdate | date: '%d %B, %Y' }}</time>
+      <h2 class=""><a href="{{ item.url }}">{{ item.name }}</a></h2>
+    </li>
+    {% endif %}
+  {% endfor %}
+</ul>
+
+<h2>Archived Events</h2>
+<ul class="">
+  {% for item in sorted %}
+    {% capture nowtime %}{{'now' | date: '%s'}}{% endcapture %}
+    {% capture eventtime %}{{item.eventdate | date: '%s'}}{% endcapture %}
+    {% if nowtime > eventtime %}
+
+    <li class="">
+      <time class="" datetime="{{ item.eventdate | date: "%Y-%m-%d" }}">{{ item.eventdate | date: '%d %B, %Y' }}</time>
+      <h2 class=""><a href="{{ item.url }}">{{ item.name }}</a></h2>
+      {% if item.report %}
+        <a href="{{ site.url }}/{{ item.report }}">Report</a>
+      {% endif %}
+    </li>
+    {% endif %}
+  {% endfor %}
+</ul>

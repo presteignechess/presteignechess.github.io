@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+{% include header.html %}
+
+<section class="{{ page.section-class }}" id="{{ page.section-id }}">
+  <div class="wrapper">
+    <div class="layout">
+      <h1>{{ page.name }}</h1>
+      {{ content }}
+    </div>
+  </div>
+</section>
+
+<ul class="archive-list">
+  {% assign eventname = page.name %}
+  {% for post in site.posts %}
+    {% if post.categories contains "event" and post.ref == eventname %}
+  <li class="archive-list__item">
+    <time class="post__date" datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%d %B, %Y" }}</time>
+    <h2 class="post__title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+  </li>
+    {% endif %}
+  {% endfor %}
+</ul>

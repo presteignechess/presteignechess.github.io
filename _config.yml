@@ -17,6 +17,16 @@ markdown: kramdown
 permalink: /:year/:month/:title
 paginate: 5
 exclude: [templates, node_modules, bower_components, bower.json, gulpfile.js, Gemfile, Gemfile.lock, unused_assets]
+collections:
+  events:
+    output: true
+    permalink: /:collection/:title/
+# defaults:
+#   - scope:
+#       path: ""
+#       type: events
+#     values:
+#       permalink: /:collection/:title
 prose:
   ignore:
     - .gitignore
