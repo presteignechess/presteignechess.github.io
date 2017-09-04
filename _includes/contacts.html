@@ -1,0 +1,13 @@
+<div class="contacts">
+  
+          <p class="">For more information, please contact:</p>
+          <ul class ="contact__list">
+          {% for contact in site.data.contacts %}
+            <li class ="contact__item">
+              <span class ="contact__name">{{ contact.name }}</span>
+              <span><a href="mailto:{{ contact.email }}" class ="contact__email">{{ contact.email }}</a></span>
+              <span><a href="tel:{{ contact.phone }}" class ="contact__phone">{{ contact.phone }}</a></span>
+            </li>
+          {% endfor %}
+        </ul>
+          </div>
