@@ -2,25 +2,28 @@
 layout: default
 ---
 
-{% include header.html %}
-
-<section class="{{ page.section-class }}" id="{{ page.section-id }}">
+<header class="page-head">
+  {% include nav.html %}
   <div class="wrapper">
-    <div class="layout">
-      <h1>{{ page.name }}</h1>
-      {{ content }}
-    </div>
+    <h1 class="heading-page">{{ page.name }}</h1>
   </div>
-</section>
 
-<ul class="archive-list">
-  {% assign eventname = page.name %}
-  {% for post in site.posts %}
-    {% if post.categories contains "event" and post.ref == eventname %}
-  <li class="archive-list__item">
-    <time class="post__date" datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%d %B, %Y" }}</time>
-    <h2 class="post__title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
-  </li>
-    {% endif %}
-  {% endfor %}
-</ul>
+</header>
+
+<div class="wrapper content-wrapper">
+  <section class="{{ page.section-class }}" id="{{ page.section-id }}">
+    {{ content }}
+  </section>
+
+  <ul class="archive-list">
+    {% assign eventname = page.name %}
+    {% for post in site.posts %}
+      {% if post.categories contains "event" and post.ref == eventname %}
+    <li class="archive-list__item">
+      <time class="post__date" datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%d %B, %Y" }}</time>
+      <h2 class="post__title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+    </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</div>

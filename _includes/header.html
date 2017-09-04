@@ -1,24 +1,7 @@
 <header class="page-head">
-  <div class="dropcloth">
-    <div class="wrapper">
-
-      {% include king.html %}
-
-      <div class="club-name-wrapper">
-        <a href="{{ site.baseurl }}/" class="club-name">{{ site.title }}</a>
-      </div>
-
-      {% include minor-pieces.html %}
-
-      <div class="meetings-info">
-        <div class="meetings__time">
-        {{ site.weekday }} {{ site.meetingtime }}
-        </div>
-        <div class="meetings__venue">
-        {{ site.venue }}
-        </div>
-      </div>
+    {% include nav.html %}
+    <div class="wrapper header-wrapper">
+      <h1>{{ page.title }}</h1>
     </div>
-  </div>
 
 </header>

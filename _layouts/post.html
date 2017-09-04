@@ -2,24 +2,33 @@
 layout: default
 ---
 
-{% include header.html %}
-
-<section class="section-post" id="section:post">
-  <div class="wrapper">
-    <article class="news-article">
-      <div class="news-article__date">
-        <time datetime="{{ post.date | date: "%Y-%m-%d" }}">
-          <span>{{ page.date | date: "%A, %-d %B %Y" }}</span>
-        </time>
-        <a href="{{ post.url }}" class="news-article__permalink"></a>
-      </div>
-      <div class="news-article__content">
-        <h3 class="heading-news">{{ page.title }}</h3>
-        {{ content }}
-        <div class="news-article__author">
-          <em>{{ page.author}}</em>
-        </div>
-      </div>
-    </article>
+<header class="page-head">
+  {% include nav.html %}
+  <div class="wrapper  header-wrapper">
+    <h1 class="heading-page">{{ page.title }}</h1>
+    <div class="post-date">
+      <time datetime="{{ post.date | date: "%Y-%m-%d" }}">
+        <span>{{ page.date | date: "%A, %-d %B %Y" }}</span>
+      </time>
+    </div>
   </div>
-</section>
+</header>
+
+<div class="wrapper content-wrapper">
+  <section class="section-post" id="section:post">
+    <div class="wrapper">
+      <article class="news-article">
+        <div class="news-article__content">
+
+          <div class="news-article__date">
+            <a href="{{ post.url }}" class="news-article__permalink"></a>
+          </div>
+          {{ content }}
+          <div class="news-article__author">
+            <em>{{ page.author}}</em>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+</div>
