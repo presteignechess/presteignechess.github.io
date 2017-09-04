@@ -1,18 +1,23 @@
 ---
-layout: front
+layout: default
 "page-class": "page--front"
 title: Presteigne Chess Club
-contactname: Kevin
-contactemail: "kevin@saull.com"
-contactphone: 01547 560473
-contact2name:
-contact2email:
-contact2phone:
-
+intro: |
+  A busy, friendly chess club in the Welsh Marches. All strengths and ages
+  welcome.
 published: true
 ---
 
+<header class="page-head">
+  {% include nav.html %}
+  <div class="wrapper  header-wrapper">
+    <h1 class="heading-page  site-name">{{ site.title }}</h1>
+    {% include meetings.html %}
+    <div class="page-intro">{{ page.intro }}</div>
+    {% include contacts.html %}
+  </div>
+</header>
 
-
-A busy, friendly chess club in the Welsh Marches. All strengths and ages
-welcome.
+<div class="wrapper content-wrapper">
+  {% include paginator.html %}
+</div>
