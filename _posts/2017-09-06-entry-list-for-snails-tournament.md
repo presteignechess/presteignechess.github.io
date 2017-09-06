@@ -6,8 +6,6 @@ layout: post
 date: 2017-09-06
 ---
 
-**Entries For The Presteigne Snails Tournjament**
-
 The list is still open.
 
 |---
