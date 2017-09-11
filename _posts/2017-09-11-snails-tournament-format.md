@@ -6,8 +6,6 @@ layout: post
 date: 2017-09-11
 ---
 
-** Snails Tournament Format
-
 Play one game a month. 
 
 The tournament should start in the first month of October and last 6 months if there are enough entrants. One month less than the number of entrants if there are fewer than seven.
