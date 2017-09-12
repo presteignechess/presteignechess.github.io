@@ -2,24 +2,47 @@
     #PAGE
 \*------------------------------------*/
 
-@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600);
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
 
 @-ms-viewport{
   width: device-width;
 }
 
-html {
-    font-family: "Source Sans Pro", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-    font-weight: 300;
-    font-size: $base-font-size;
-    color: $color-text;
-    text-align: left;
-    line-height: 1.6;
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
 
-.section-news,
-.section-archive,
-.section-post {
-    padding: 4em 0;
+html {
+  font-family: $base-font;
+  font-weight: 400;
+  font-size: $base-font-size;
+  color: $color-text;
+
+  @media screen and (min-width: $tab) {
+    font-size: $base-font-size--large;
+  }
+
 }
+
+
+
+
+
+/**
+ * Main page container.
+ * 
+ * 1. 
+ */
+.container {
+  background: linear-gradient($color-blue-faded, $color-blue-dark calc(100vw * 0.75)),
+              url(../img/rad.jpg) no-repeat; /* [1] */
+  background-size: auto, cover;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+
+  .region {
+    flex: 0 0 100%;
+  }

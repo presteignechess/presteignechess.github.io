@@ -1,0 +1,30 @@
+/*------------------------------------*\
+    #NAV
+\*------------------------------------*/
+
+.site-nav {
+  padding: $spacing-unit--small 0;
+  background-color: $color-white;
+}
+
+.site-nav > .wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+  .site-nav__list {
+    display: flex;
+  }
+
+    .site-nav__item {
+      margin: 0 1em;
+    }
+
+
+  .site-nav__home {
+    font-size: 110%;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 700;
+    word-spacing: 0.1em;
+  }

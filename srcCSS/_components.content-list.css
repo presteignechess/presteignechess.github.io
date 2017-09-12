@@ -1,0 +1,38 @@
+/*------------------------------------*\
+    #CONTENT-LISTS
+\*------------------------------------*/
+
+.content-list {
+  list-style: none;
+  padding: 0 0 1.5em 0;
+  line-height: 1.6;
+}
+
+
+  .content-list__item {
+    display: grid;
+    grid-template-columns: 11em auto;
+    border-bottom: $border-light;
+    padding: 1.5em 0;
+    align-items: baseline;
+
+    &:first-of-type{
+      border-top: $border-light;
+    }
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+  }
+
+
+    .content-list__date {
+        font-weight: bold;
+    }
+
+
+    .content-list__link {
+        font-size: 120%;
+        font-weight: normal;
+    }

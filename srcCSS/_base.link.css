@@ -5,11 +5,9 @@
 a {
     text-decoration: none;
     color: $color-link;
-    font-weight: 400;
-    border-bottom: 1px solid lighten($color-blue, 40%);
+    font-weight: 700;
 
-    &:hover {
+    &:hover, &:active, &:focus {
         color: $color-link-hover;
-        background: lighten($color-blue, 40%);
     }
 }

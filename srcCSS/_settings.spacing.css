@@ -2,5 +2,6 @@
     #SPACING
 \*------------------------------------*/
 
-$spacing-unit       : 4em;
-$spacing-unit--small: 1.5em;
+$spacing-unit--tiny        : 1rem;
+$spacing-unit--small       : 2rem;
+$spacing-unit              : 4rem;

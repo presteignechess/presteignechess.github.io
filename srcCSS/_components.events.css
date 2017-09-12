@@ -1,0 +1,25 @@
+/**
+ * Reports.
+ */
+.reports {
+  margin: $spacing-unit 0;
+  padding-top: $spacing-unit--small;
+}
+
+
+
+
+
+/**
+ * Embedded Rules.
+ */
+* + .rules {
+  margin-top: $spacing-unit--small;
+  padding: $spacing-unit--small $spacing-unit;
+  background: $color-grey-lighter;
+  border-top: $border-dark;
+}
+
+  .rules__body {
+    font-size: 90%;
+  }
