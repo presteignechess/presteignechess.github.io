@@ -2,28 +2,63 @@
 layout: default
 ---
 
-<header class="page-head">
+<header class="page-head  region">
   {% include nav.html %}
-  <div class="wrapper">
+  <div class="wrapper  header-wrapper">
+    <div class="context-tag">
+      <span class="context-tag__name">Event</span>
+    </div>
     <h1 class="heading-page">{{ page.name }}</h1>
   </div>
-
 </header>
 
-<div class="wrapper content-wrapper">
-  <section class="{{ page.section-class }}" id="{{ page.section-id }}">
-    {{ content }}
-  </section>
 
-  <ul class="archive-list">
-    {% assign eventname = page.name %}
-    {% for post in site.posts %}
-      {% if post.categories contains "event" and post.ref == eventname %}
-    <li class="archive-list__item">
-      <time class="post__date" datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%d %B, %Y" }}</time>
-      <h2 class="post__title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
-    </li>
+
+
+<div class="content-section  region" id="">
+    <div class="wrapper  content-wrapper  content-wrapper--opaque">
+      <article>
+        <h2 class="heading-sub">Details</h2>
+      {{ content }}
+      </article>
+      {% assign postcount = site.posts | where:"ref", page.name | size %}
+      {% if postcount > 0 %}
+      <section class="reports">
+        <h2>Reports</h2>
+        <ul class="content__list">
+        {% for post in site.posts %}
+          {% if post.ref == page.name %}
+          <li class="content-list__item">
+            <div class="content-list__date">
+              <time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%d %B, %Y" }}</time>
+            </div>
+            <div class="content-list__details">
+              <a href="{{ post.url }}" class="content-list__link">{{ post.title }}</a>
+            </div>
+          </li>
+          {% endif %}
+        {% endfor %}
+        </ul>
+      </section>
       {% endif %}
-    {% endfor %}
-  </ul>
-</div>
+
+      {% assign ruleslist = site.rules | where:"label", page.rules %}
+      {% assign rulescount = ruleslist | size %}
+      {% if rulescount > 0 %}
+      <section class="rules">
+        <h2 class="heading-sub">Rules and Format</h2>
+        {% for ruleset in ruleslist %}
+        <div class="rules__body">
+          {{ ruleset.content | markdownify }}
+        </div>
+        {% endfor %}
+      </section>
+      {% endif %}
+
+    </div>
+  </div>
+
+
+
+
+

@@ -1,41 +1,46 @@
 ---
 layout: page
 title: Events
-page-class: page--archive
+page-class: page--events
 section-class: section-events
 section-id: section:events
 permalink: /events/
 ---
 
-<ul class="">
-  {% assign sorted = (site.events | sort: 'eventdate') %}
-  {% for item in sorted %}
-    {% capture nowtime %}{{'now' | date: '%s'}}{% endcapture %}
-    {% capture eventtime %}{{item.eventdate | date: '%s'}}{% endcapture %}
-    {% if nowtime < eventtime %}
-
-    <li class="">
-      <time class="" datetime="{{ item.eventdate | date: "%Y-%m-%d" }}">{{ item.eventdate | date: '%d %B, %Y' }}</time>
-      <h2 class=""><a href="{{ item.url }}">{{ item.name }}</a></h2>
-    </li>
-    {% endif %}
-  {% endfor %}
-</ul>
-
-<h2>Archived Events</h2>
-<ul class="">
-  {% for item in sorted %}
-    {% capture nowtime %}{{'now' | date: '%s'}}{% endcapture %}
-    {% capture eventtime %}{{item.eventdate | date: '%s'}}{% endcapture %}
-    {% if nowtime > eventtime %}
-
-    <li class="">
-      <time class="" datetime="{{ item.eventdate | date: "%Y-%m-%d" }}">{{ item.eventdate | date: '%d %B, %Y' }}</time>
-      <h2 class=""><a href="{{ item.url }}">{{ item.name }}</a></h2>
-      {% if item.report %}
-        <a href="{{ site.url }}/{{ item.report }}">Report</a>
+{% assign sorted = (site.events | sort: 'startdate' | reverse) %}
+{% for event in sorted %}
+{% assign currentDate = event.startdate | date: "%Y" %}
+{% if currentDate != myDate %}
+  {% unless forloop.first %}</ol>{% endunless %}
+  <h2 class="heading-year">{{ currentDate }}</h2>
+  <ol class="content-list">
+  {% assign myDate = currentDate %}
+{% endif %}
+  <li class="content-list__item">
+    <div class="content-list__date">
+      {% assign startYear = (event.startdate | date: '%Y') %}
+      {% assign endYear = (event.enddate | date: '%Y') %}
+      {% assign startMonth = (event.startdate | date: '%B') %}
+      {% assign endMonth = (event.enddate | date: '%B') %}
+      {% if event.enddate %}
+        {% if startYear != endYear %}
+        <time datetime="{{ event.startdate | date: "%Y-%m-%d" }}">{{ event.startdate | date: '%d %B, %Y' }}</time>
+          - <time datetime="{{ event.enddate | date: "%Y-%m-%d" }}">{{ event.enddate | date: '%d %B, %Y' }}</time>
+        {% elsif startYear == endYear and startMonth != endMonth %}
+        <time datetime="{{ event.startdate | date: "%Y-%m-%d" }}">{{ event.startdate | date: '%d %B' }}</time>
+          - <time datetime="{{ event.enddate | date: "%Y-%m-%d" }}">{{ event.enddate | date: '%d %B' }}</time>
+        {% else %}
+        <time datetime="{{ event.startdate | date: "%Y-%m-%d" }}">{{ event.startdate | date: '%d' }}</time>
+          - <time datetime="{{ event.enddate | date: "%Y-%m-%d" }}">{{ event.enddate | date: '%d %B' }}</time>
+        {% endif %}
+      {% else %}
+      <time datetime="{{ event.startdate | date: "%Y-%m-%d" }}">{{ event.startdate | date: '%d %B' }}</time>
       {% endif %}
-    </li>
-    {% endif %}
-  {% endfor %}
-</ul>
+    </div>
+    <div class="content-list__details">
+      <a href="{{ event.url }}" class="content-list__link">{{ event.name }}</a><br>
+      {{event.summary}}
+    </div>
+  </li>
+{% if forloop.last %}</ol>{% endif %}
+{% endfor %}

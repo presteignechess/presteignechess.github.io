@@ -15,18 +15,15 @@ url: "http://presteignechess.club" # the base hostname & protocol for your site
 # Build settings
 markdown: kramdown
 permalink: /:year/:month/:title
-paginate: 5
+paginate: 25
 exclude: [templates, node_modules, bower_components, bower.json, gulpfile.js, Gemfile, Gemfile.lock, unused_assets]
 collections:
   events:
     output: true
     permalink: /:collection/:title/
-# defaults:
-#   - scope:
-#       path: ""
-#       type: events
-#     values:
-#       permalink: /:collection/:title
+  rules:
+    output: true
+    permalink: /:collection/:title/
 prose:
   ignore:
     - .gitignore
