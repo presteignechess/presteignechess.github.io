@@ -49,7 +49,7 @@
  * On wider screens, the list impersonates a chessboard.
  */
 
-@media screen and (min-width: $tab) {
+@media screen and (min-width: $tablet-portrait) {
 
   @supports (display:grid) {
     .news {

@@ -9,12 +9,11 @@
 }
 
 
+
+
   .content-list__item {
-    display: grid;
-    grid-template-columns: 11em auto;
     border-bottom: $border-light;
     padding: 1.5em 0;
-    align-items: baseline;
 
     &:first-of-type{
       border-top: $border-light;
@@ -22,6 +21,15 @@
 
     &:last-child {
       border-bottom: none;
+    }
+
+    @media screen and (min-width: $phone-portrait) {
+      @supports (display:grid) {
+          display: grid;
+          grid-template-columns: 11em auto;
+          align-items: baseline;
+      }
+    
     }
 
   }

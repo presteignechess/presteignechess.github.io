@@ -2,5 +2,6 @@
     #BREAKPOINTS
 \*------------------------------------*/
 
-$tab                   : 820px;
+$phone-portrait                   : 560px;
+$tablet-portrait                  : 820px;
 
