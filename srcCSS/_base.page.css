@@ -18,7 +18,7 @@ html {
   font-size: $base-font-size;
   color: $color-text;
 
-  @media screen and (min-width: $tab) {
+  @media screen and (min-width: $tablet-portrait) {
     font-size: $base-font-size--large;
   }
 
