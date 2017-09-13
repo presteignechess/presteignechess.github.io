@@ -42,7 +42,6 @@ html {
   flex-direction: column;
 }
 
-
-  .region {
-    flex: 0 0 100%;
-  }
+.region {
+  flex: 0 0 100%;
+}

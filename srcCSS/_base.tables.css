@@ -3,25 +3,25 @@
 \*------------------------------------*/
 
 table {
-    min-width: 50%;
-    line-height: 1.75;
-    border-spacing: 0;
-    margin: 0 0 $spacing-unit;
-    border-bottom: $border-light;
+  min-width: 50%;
+  line-height: 1.75;
+  border-spacing: 0;
+  margin: 0 0 $spacing-unit;
+  border-bottom: $border-light;
 }
 
 th, td {
-    padding: 0.25em 0.75em;
+  padding: 0.25em 0.75em;
 }
 
 th {
-    border-top: $border-dark;
+  border-top: $border-dark;
 }
 
 td {
-    border-top: $border-light;
+  border-top: $border-light;
 }
 
 tbody tr:nth-child(odd) {
-    background: $color-grey-lighter;
+  background: $color-grey-lighter;
 }

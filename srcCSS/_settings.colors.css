@@ -2,10 +2,10 @@
     #COLORS
 \*------------------------------------*/
 
-$color-white        : rgb(255,255,255);
+$color-white             : rgb(255,255,255);
 $color-white-transparent : rgba(255,255,255, 0.5);
-$color-black        : hsl(0, 0%, 10%);
-$color-red          : rgb(166, 0, 6);
+$color-black             : hsl(0, 0%, 10%);
+$color-red               : rgb(166, 0, 6);
 
 
 
@@ -27,7 +27,7 @@ $color-blue         : rgb(13, 74, 135);
 $color-blue-accent  : rgb(0, 67, 135);
 $color-blue-faded   : rgba(62, 82, 101, 0.9);
 $color-blue-dark    : rgb(35, 49, 61);
-$color-blue-darker    : rgb(21, 33, 43);
+$color-blue-darker  : rgb(21, 33, 43);
 $color-gold         : rgb(65, 57, 21);
 
 $color-brown        : rgb(58, 36, 0);

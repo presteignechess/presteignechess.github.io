@@ -8,9 +8,6 @@
   line-height: 1.6;
 }
 
-
-
-
   .content-list__item {
     border-bottom: $border-light;
     padding: 1.5em 0;
@@ -34,11 +31,9 @@
 
   }
 
-
     .content-list__date {
         font-weight: bold;
     }
-
 
     .content-list__link {
         font-size: 120%;

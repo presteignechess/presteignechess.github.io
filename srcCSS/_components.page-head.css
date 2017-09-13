@@ -35,7 +35,9 @@
   text-align: center;
 }
 
-
+/**
+ * Divider pseudo-element.
+ */
 .page-head__intro:before {
   content: "";
   display: block;

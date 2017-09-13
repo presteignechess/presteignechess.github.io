@@ -2,7 +2,6 @@
     #TYPE
 \*------------------------------------*/
 
-
 /**
  * Headings.
  */
@@ -19,20 +18,17 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0.2em;
 }
 
-
 h2 {
   font-weight: 600;
   text-transform: uppercase;
   margin-bottom: $spacing-unit--small;
 }
 
-
 .heading-sub {
   font-weight: 600;
   text-transform: uppercase;
   margin-bottom: $spacing-unit--small;
 }
-
 
 .heading-news {
   font-size: 110%;

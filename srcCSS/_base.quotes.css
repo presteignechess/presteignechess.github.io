@@ -10,11 +10,11 @@ q {
   quotes: "‘" "’" "“" "”";
 
   &:before {
-      content: open-quote;
+    content: open-quote;
   }
 
   &:after {
-      content: close-quote;
+    content: close-quote;
   }
 
 }
@@ -50,7 +50,7 @@ blockquote {
       margin-bottom: 0;
 
       &:after {
-          content: close-quote;
+        content: close-quote;
       }
 
       }

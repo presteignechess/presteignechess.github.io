@@ -3,22 +3,22 @@
 \*------------------------------------*/
 
 .pagination {
-    list-style: none;
-    margin-top: 2em;
-    padding: 1em 0;
-    text-align: center;
+  list-style: none;
+  margin-top: 2em;
+  padding: 1em 0;
+  text-align: center;
 }
 
 .pagination-link {
-    color: $color-black;
-    font-weight: 600;
-    text-transform: uppercase;
-    border: none;
-    display: inline-block;
-    margin: 0 2em;
+  color: $color-black;
+  font-weight: 600;
+  text-transform: uppercase;
+  border: none;
+  display: inline-block;
+  margin: 0 2em;
 
-    &:hover {
-        background: transparent;
-        color: $color-blue;
-    }
+  &:hover {
+    background: transparent;
+    color: $color-blue;
+  }
 }

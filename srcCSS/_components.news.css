@@ -1,3 +1,7 @@
+/*------------------------------------*\
+    #News List
+\*------------------------------------*/
+
 .section-news {
   color: $color-white;
 }
@@ -28,12 +32,10 @@
 
 }
 
-
   .news__date {
     font-size: 90%;
     margin-bottom: 0.5em;
   }
-
 
   .news__title {
     margin-bottom: 0;
@@ -50,13 +52,11 @@
  */
 
 @media screen and (min-width: $tablet-portrait) {
-
   @supports (display:grid) {
     .news {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
     }
-  
   
       .news__item {
         padding: $spacing-unit;
