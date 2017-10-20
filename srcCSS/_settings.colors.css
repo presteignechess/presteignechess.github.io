@@ -33,7 +33,7 @@ $color-gold         : rgb(65, 57, 21);
 $color-brown        : rgb(58, 36, 0);
 $color-brown-light  : rgb(135, 84, 0);
 
-$color-yellow       : hsl(40, 75%, 51%);
+$color-yellow       : hsl(48, 100%, 50%);
 
 $color-link         : $color-blue;
 $color-link-hover   : $color-brown-light;

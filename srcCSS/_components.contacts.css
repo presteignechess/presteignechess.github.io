@@ -36,5 +36,5 @@
   .contact__email,
   .contact__phone {
     @mixin link-inverse;
-    font-weight: 300;
+    font-weight: 400;
   }
