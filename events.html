@@ -22,6 +22,7 @@ permalink: /events/
       {% assign endYear = (event.enddate | date: '%Y') %}
       {% assign startMonth = (event.startdate | date: '%B') %}
       {% assign endMonth = (event.enddate | date: '%B') %}
+      {% assign content = (event.content | strip_newlines ) %}
       {% if event.enddate %}
         {% if startYear != endYear %}
         <time datetime="{{ event.startdate | date: "%Y-%m-%d" }}">{{ event.startdate | date: '%d %B, %Y' }}</time>
@@ -38,8 +39,13 @@ permalink: /events/
       {% endif %}
     </div>
     <div class="content-list__details">
-      <a href="{{ event.url }}" class="content-list__link">{{ event.name }}</a><br>
-      {{event.summary}}
+      {% if content != "" %}
+        <a href="{{ event.url }}" class="content-list__link">{{ event.name }}</a>
+      {% else %}
+        <span class="content-list__link">{{ event.name }}</span>
+      {% endif %}<br>
+      {{ event.summary }}
+      
     </div>
   </li>
 {% if forloop.last %}</ol>{% endif %}
