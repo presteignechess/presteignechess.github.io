@@ -14,5 +14,5 @@
 
 
 @define-mixin link-inverse {
-    @mixin link $color-yellow, $color-white;
+    @mixin link $color-yellow, $color-yellow-light;
 }

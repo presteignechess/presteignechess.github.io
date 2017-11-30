@@ -21,6 +21,7 @@
     }
 
   .site-nav__home {
+    @mixin link;
     font-size: 110%;
     text-transform: uppercase;
     letter-spacing: 0.05em;

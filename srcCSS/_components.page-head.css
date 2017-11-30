@@ -19,7 +19,8 @@
   text-transform: uppercase;
   letter-spacing: 0.1em;
   font-weight: 700;
-  margin: 0 0 $spacing-unit--small;
+  margin: 0;
+  margin-bottom: $spacing-unit--small;
 }
 
 
@@ -41,7 +42,7 @@
 .page-head__intro:before {
   content: "";
   display: block;
-  border-top: 1px solid $color-white-transparent;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
   width: 40%;
   margin: $spacing-unit--tiny auto;
 }

@@ -30,12 +30,10 @@ html {
 
 /**
  * Main page container.
- * 
- * 1. 
  */
 .container {
   background: linear-gradient($color-blue-faded, $color-blue-dark calc(100vw * 0.75)),
-              url(../img/rad.jpg) no-repeat; /* [1] */
+              url(../img/rad.jpg) no-repeat;
   background-size: auto, cover;
   min-height: 100vh;
   display: flex;

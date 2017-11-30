@@ -3,9 +3,8 @@
 \*------------------------------------*/
 
 $color-white             : rgb(255,255,255);
-$color-white-transparent : rgba(255,255,255, 0.5);
 $color-black             : hsl(0, 0%, 10%);
-$color-red               : rgb(166, 0, 6);
+
 
 
 
@@ -13,29 +12,28 @@ $color-red               : rgb(166, 0, 6);
 /**
  * Greys.
  */
-$color-grey         : hsl(0, 0%, 50%);
-$color-grey-mid     : hsl(0, 0%, 30%);
-$color-grey-dark    : hsl(0, 0%, 20%);
-$color-grey-light   : hsl(0, 0%, 75%);
-$color-grey-lighter : hsl(0, 0%, 90%);
+$color-grey:         hsl(0, 0%, 50%);
+$color-grey-dark:    hsl(0, 0%, 20%);
+$color-grey-light:   hsl(0, 0%, 75%);
+$color-grey-lighter: hsl(0, 0%, 90%);
 
 
 
 
-$color-blue-light   : rgb(217, 223, 228);
-$color-blue         : rgb(13, 74, 135);
-$color-blue-accent  : rgb(0, 67, 135);
-$color-blue-faded   : rgba(62, 82, 101, 0.9);
-$color-blue-dark    : rgb(35, 49, 61);
-$color-blue-darker  : rgb(21, 33, 43);
-$color-gold         : rgb(65, 57, 21);
 
-$color-brown        : rgb(58, 36, 0);
-$color-brown-light  : rgb(135, 84, 0);
+$color-blue-light:   rgb(217, 223, 228);
+$color-blue:         rgb(13, 74, 135);
+$color-blue-faded:   rgba(62, 82, 101, 0.9);
+$color-blue-dark:    rgb(35, 49, 61);
+$color-blue-darker:  rgb(21, 33, 43);
 
-$color-yellow       : hsl(48, 100%, 50%);
 
-$color-link         : $color-blue;
-$color-link-hover   : $color-brown-light;
 
-$color-text         : $color-grey-dark;
+$color-yellow:       hsl(48, 100%, 50%);
+$color-yellow-light: hsl(48, 100%, 65%);
+$color-gold:         hsl(48, 100%, 20%);
+
+$color-link: $color-blue;
+$color-link-hover: $color-gold;
+
+$color-text: $color-grey-dark;
