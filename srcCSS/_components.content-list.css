@@ -23,7 +23,7 @@
     @media screen and (min-width: $phone-portrait) {
       @supports (display:grid) {
           display: grid;
-          grid-template-columns: 11em auto;
+          grid-template-columns: 12em auto;
           align-items: baseline;
       }
     

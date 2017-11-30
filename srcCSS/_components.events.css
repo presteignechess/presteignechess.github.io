@@ -2,6 +2,38 @@
     #EVENTS
 \*------------------------------------*/
 
+.event__time::before {
+  content: ", ";
+}
+
+
+@media screen and (min-width: $phone-portrait) {
+
+  .event__time {
+    font-weight: normal;
+  }
+
+    .event__time::before {
+      content: none;
+    }
+
+    
+  .event__time,
+  .event__end {
+      display: block;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
 /**
  * Reports.
  */
