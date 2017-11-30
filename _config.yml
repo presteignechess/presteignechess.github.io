@@ -79,4 +79,4 @@ prose:
           type: text
 
 # Gems
-gems: [jekyll-paginate]
+plugins: [jekyll-paginate]
