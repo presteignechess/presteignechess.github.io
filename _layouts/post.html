@@ -2,18 +2,27 @@
 layout: default
 ---
 
-  <header class="post-header">
-    <h3 class="post-title" itemprop="name headline">{{ page.title | escape }}</h3>
-    <p class="post-meta">
-      <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-        {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
-        {{ page.date | date: date_format }}
+<header class="page-head  region">
+  {% include nav.html %}
+  <div class="wrapper  header-wrapper">
+    <h1 class="heading-page">{{ page.title }}</h1>
+    <div class="post-date">
+      <time datetime="{{ post.date | date: "%Y-%m-%d" }}">
+        <span>{{ page.date | date: "%A, %-d %B %Y" }}</span>
       </time>
-      {% if page.author %}
-        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>
-      {% endif %}</p>
-  </header>
-
-  <div class="post-content" >
-    {{ content }}
+    </div>
   </div>
+</header>
+
+<section class="section-post  content-section  region" id="section:post">
+  <div class="wrapper  content-wrapper  content-wrapper--opaque">
+    <article class="article">
+      <div class="article__body">
+        {{ content }}
+        <div class="article__author">
+          <em>{{ page.author}}</em>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>

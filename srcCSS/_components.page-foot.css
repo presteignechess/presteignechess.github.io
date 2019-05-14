@@ -1,0 +1,14 @@
+/*------------------------------------*\
+    #FOOTER
+\*------------------------------------*/
+
+/**
+ * 1. The footer is the last element in a flex container, and this prevents it
+ *    from rising up on empty pages.
+ */
+footer {
+  color: $color-white;
+  text-align: center;
+  padding: $spacing-unit--small;
+  margin-top: auto; /* [1] */
+}

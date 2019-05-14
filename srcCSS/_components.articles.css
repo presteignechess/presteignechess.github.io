@@ -1,0 +1,16 @@
+/*------------------------------------*\
+    #ARTICLES
+\*------------------------------------*/
+
+article {
+  font-size: 110%;
+}
+
+.post-date {
+  font-size: 110%;
+  text-align: center;
+}
+
+.article__author {
+  color: $color-grey;
+}

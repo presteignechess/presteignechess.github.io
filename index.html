@@ -1,0 +1,33 @@
+---
+layout: default
+"page-class": "page--front"
+title: Presteigne Chess Club
+intro: |
+  A busy, friendly chess club in the Welsh Marches. All strengths and ages
+  welcome.
+published: true
+---
+
+<header class="page-head  region">
+  {% include nav.html %}
+  <div class="wrapper  header-wrapper">
+    <h1 class="heading-page  site-name">{{ site.title }}</h1>
+    <div class="page-head__meetings">
+      <strong>{{ site.weekday }} {{ site.meetingtime }}</strong> :: <strong>{{ site.venue }}</strong>
+    </div>
+    <div class="page-head__intro">
+      <p>{{ page.intro }} <br>For more information, contact:</p>
+    </div>
+    {% include contacts.html %}
+  </div>
+</header>
+
+
+<section class="section-news  content-section  content-section--transparent  region" id="section:news">
+  <div class="wrapper  content-wrapper">
+    <h2 class="heading-sub">Club News</h2>
+      <div class="news">
+      {% include paginator.html %}
+      </div>
+  </div>
+</section>

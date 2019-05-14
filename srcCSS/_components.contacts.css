@@ -1,0 +1,40 @@
+/*------------------------------------*\
+    #Contacts
+\*------------------------------------*/
+
+.contacts {
+  margin: $spacing-unit--small 0;
+  text-align: center;
+}
+
+  .contact__name {
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  .contact__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+
+
+
+
+/**
+ * Contact Info.
+ */
+.contact__item {
+  display: flex;
+  flex-direction: column;
+  margin: 0 $spacing-unit--small;
+  line-height: 1.6;
+}
+
+  .contact__email,
+  .contact__phone {
+    @mixin link-inverse;
+    font-weight: 400;
+  }

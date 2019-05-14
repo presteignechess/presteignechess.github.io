@@ -1,0 +1,44 @@
+/*------------------------------------*\
+    #WRAPPERS
+\*------------------------------------*/
+
+.wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-right: $spacing-unit--small;
+  padding-left:  $spacing-unit--small;
+}
+
+
+
+
+
+.content-wrapper {
+  padding: $spacing-unit calc(7vw + 1em);
+}
+
+  .content-wrapper--opaque {
+    background-color: $color-white;
+  }
+
+
+
+
+
+.header-wrapper {
+  margin-top: $spacing-unit;
+  margin-bottom: $spacing-unit;
+  position: relative;
+}
+
+
+
+
+
+/**
+ * Section padding to preserve slim content margins at small resolutions.
+ */
+.content-section {
+  padding-left: $spacing-unit--tiny;
+  padding-right: $spacing-unit--tiny;
+}

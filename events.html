@@ -1,0 +1,56 @@
+---
+layout: page
+title: Events
+page-class: page--events
+section-class: section-events
+section-id: section:events
+permalink: /events/
+---
+
+{% assign sorted = site.events | sort: 'startdate' | reverse %}
+{% for event in sorted %}
+{% assign currentDate = event.startdate | date: "%Y" %}
+{% if currentDate != myDate %}
+  {% unless forloop.first %}</ol>{% endunless %}
+  <h2 class="heading-year">{{ currentDate }}</h2>
+  <ol class="content-list">
+  {% assign myDate = currentDate %}
+{% endif %}
+  <li class="content-list__item">
+    <div class="content-list__date">
+      {% assign content = event.content | strip_newlines  %}
+      {% assign startYear = event.startdate | date: '%Y' %}
+      {% assign endYear = event.enddate | date: '%Y' %}
+      {% assign startMonth = event.startdate | date: '%B' %}
+      {% assign endMonth = event.enddate | date: '%B' %}
+      {% assign format = '%B %-d' %}
+
+      {% if event.enddate and startYear != endYear %}
+        {% assign format = '%B %-d, %Y' %}
+      {% endif %}
+        
+      {% assign start = event.startdate | date: format %}
+      {% assign end = event.enddate | date: format %}
+      {% if startYear == endYear and startMonth == endMonth %}
+        {% assign start = event.startdate | date: '%-d' %}
+      {% endif %}
+
+      {% if event.enddate %}
+      <time datetime="{{ event.startdate | date: "%F" }}">{{ start }}</time>
+      - <span class="event__end"><time datetime="{{ event.enddate | date: "%F" }}">{{ end }}</time></span>
+      {% else %}
+      <time datetime="{{ event.startdate | date: "%FT%T" }}">{{ start }}<span class="event__time">{{ event.startdate | date: "%-I.%M%P" }} </span></time>
+      {% endif %}
+    </div>
+    <div class="content-list__details">
+      {% if content != "" %}
+        <a href="{{ event.url }}" class="content-list__link">{{ event.name }}</a>
+      {% else %}
+        <span class="content-list__link">{{ event.name }}</span>
+      {% endif %}<br>
+      {{ event.summary }}
+      
+    </div>
+  </li>
+{% if forloop.last %}</ol>{% endif %}
+{% endfor %}

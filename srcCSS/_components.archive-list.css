@@ -1,0 +1,13 @@
+/*------------------------------------*\
+    #ARCHIVE-LISTS
+\*------------------------------------*/
+
+.archive__list {
+  list-style: none;
+  border-top: $border-light;
+}
+
+  .archive__item {
+    margin: $spacing-unit--tiny 0;
+  }
+
