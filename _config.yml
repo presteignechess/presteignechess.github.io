@@ -23,7 +23,7 @@ github_username:  BrianBut
 # Chess Club specific variables - set these to values for your club
 
 title: Presteigne Chess Club
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "http://presteignechess.club" 
 clubname: Presteigne Chess Club
 clubsecretary: Dave Hancock
 secretaryphone:  01544598416
