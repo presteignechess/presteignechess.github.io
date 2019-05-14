@@ -1,0 +1,33 @@
+---
+layout: default
+---
+
+<div class="page-content">
+
+  <h2 class="page-heading">List of Members</h2>
+
+  <table>
+	<tr>
+	  <th>Name</th>
+	  <th>ECF grade</th>
+	  <th>grade</th>
+	  <th>ECF Rapid</th>
+      <th>Rapid</th>		
+	</tr>
+	{% assign sorted =  site.members | sort: 'grade' | reverse  %}
+	{% for member in sorted %}
+	  <tr>
+	    <td> {{ member.surname }},{{ member.forename }} </td>
+		<td> {% if member.ecfgrade %}
+               {{ member.ecfgrade }} 
+              {% else %}
+                {{ "?" }}
+			  {% endif %}
+        </td>
+        <td> {{ member.grade }} </td>
+		<td> {{ member.rapid }} </td>
+		<td> {{ member.ECFrapid }} </td>
+      </tr>
+	{% endfor %}
+  </table>
+</div>

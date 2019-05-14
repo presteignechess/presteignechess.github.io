@@ -1,0 +1,89 @@
+.site-header {
+}
+
+a {
+  color: blue;
+}
+
+.center { 
+  text-align: center;
+}
+
+.left {
+  text-align: left;
+}
+
+.thumbnail {
+  border: 0;
+  padding: 1em;
+  width: 30em;
+}
+
+.footer-col-wrapper {
+}
+      
+.footer-col footer-col-2 {
+  width: 50%;
+  background-color: #fdfd00;
+}
+        
+ul.contact-list {
+  font-size: 0.875em;
+}
+
+.page-heading {
+  text-align: center;
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 2em; 
+}
+
+.page-content {
+  margin-top: 6px;
+  width: 90%;
+  margin-left: 5%;
+  padding: 30px 0; }
+
+.post-list {
+}
+
+.post-title {
+}
+
+.post-meta {
+}
+
+.post-content {
+}
+
+div.pgn {
+  display: none;
+}
+
+tr {
+  text-align: center;}
+
+.pairings-table, tr, td, th {
+  background-color: #fdfdfd;
+  margin-bottom: 25px;
+  width: 570px;
+  border-collapse: collapse;
+  border: 2px solid silver;}
+
+.pairings-table, th {
+  background-color: silver;
+  margin: 2px;
+  width: 570px;
+  border-collapse: collapse;
+  border: 2px solid silver;
+  text-align: center;}
+
+.chessboard {
+  margin: 5px; 
+  width: 90%;
+  max-width: 400px;}
+
+.boardbuttons {
+  margin: 5px;
+  width: 400px;}
+
