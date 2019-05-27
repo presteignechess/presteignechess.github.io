@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+{% include head.html %}
+
+<body>
+{% include header.html %}
+<main class="page-content" aria-label="Content">   
+Most Recent First:
+{% assign tsafe = page.tournament | downcase | replace:' ','_'%}
+<table class="pairings-table">
+<tr>
+{% if tsafe == "any" %}
+  <th>Event</th>
+{% endif %}
+<th>White</th>
+<th>Black</th>
+<th>Date</th>
+<th>Result</th>
+</tr>
+{% for g in site.data.games %}
+  {% assign eventsafe = g.Event | downcase | replace:' ','_'%}
+  {% if tsafe == eventsafe or page.tournament == 'any' %}
+    {% if g.Result > "" %}
+      <tr>
+      {% if tsafe == "any" %}
+        <td>{{ g.Event }}
+      {% endif %}
+      <td>{{ g.White }}</td>
+      <td>{{ g.Black }}</td>
+      <td>{{ g.Date | replace: "00:00:00", "" }}</td>
+      <td>{{ g.Result }}</td>
+      </tr>
+    {% endif %}
+    {% endif %}
+{% endfor %}
+</table>
+{{ site.data.update_date.update_date }}
+</main>
+{% include footer.html %}
+</body>
+
+</html>

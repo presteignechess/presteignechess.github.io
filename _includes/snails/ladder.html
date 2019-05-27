@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+{% include head.html %}
+<body>
+{% include header.html %}
+<main class="page-content" aria-label="Content">
+<table class="pairings-table">  
+<tr>
+<th colspan=3> {{ player.Event }}</th>
+</tr>
+<tr>
+<th>Rung</th>
+<th> Name</th>
+<th>Last Played</th>
+</tr>
+{% for player in site.data.ladderLadder %}
+ <tr>
+ <td>{{player.Rung}}</td>
+ <td>{{player.Name}}</td>
+ <td>{{player.Last_Played}}</td>
+ </tr>
+{% endfor %}
+</table>  
+</main>
+{% include footer.html %}
+</body>
+</html>

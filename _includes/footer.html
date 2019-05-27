@@ -1,0 +1,31 @@
+<footer class="site-footer">
+
+  <div class="w3-container">
+    <div class="w3-row-padding">
+
+      <div class="w3-half">
+        <p></p>
+      </div>
+
+      <div class="w3-half">
+        <ul class="contact-list">
+     		<li> {{ site.clubname | escape }} </li>
+        {% if site.clubsecretary %}
+          <li>Secretary: {{ site.clubsecretary }}
+              {% if site.secretaryemail %}
+            	  {{ site.secretaryemail }}
+                {% endif %}
+              {% if site.secretaryphone %}
+                ( phone: {{ site.secretaryphone }} )
+                {% endif %}
+            {% endif %} </li>
+			      {% if site.webmaster %}
+              <li>Webmaster {{ site.webmaster }}</li>
+              {% endif %}
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+</footer>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+{% include head.html %}
+
+<body>
+{% include header.html %}
+
+<main class="page-content" aria-label="Content">
+<p>{{page.csv}}</p>
+<table class="pairings-table">
+<tr>
+<th>Name</th>
+<th>Starting Grade (Seeding)</th>
+</tr>
+{% for entrant in site.data.snails_2017.entry %}
+    <tr>
+    <td>{{ entrant.name }}</td>
+    <td>{{ entrant.seedinggrade }}</td>
+    </tr>
+{% endfor %}
+
+</table>  
+<p>This list of entrants is used for seeding throughout the tournament</p>
+</main>  
+
+{% include footer.html %}
+</body>
+</html>

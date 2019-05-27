@@ -1,0 +1,23 @@
+<header class = "w3-container w3-khaki" role="banner">
+  <a href="/" class="w3-bar-item w3-button w3-large">Home</a>
+  {% if site.news %}
+    {{ "<a href='/news.html' class='w3-bar-item w3-button w3-large'>News</a>" }}
+  {% endif %}
+  {% if site.show-fixtures %}
+    {{ "<a href='/fixtures.html' class='w3-bar-item w3-button w3-large'>Fixtures/Events</a>" }}
+  {% endif %}
+  {% if site.show-features %}
+    {{ "<a href='/features.html' class='w3-bar-item w3-button w3-large'>Features</a>" }}
+  {% endif %}
+  {% if site.show-members %}
+    {{ "<a href='/members.html' class='w3-bar-item w3-button w3-large'>Members</a>" }}
+  {% endif %}
+  {% if site.show-opinion %}
+    {{ "<a href='/members.html' class='w3-bar-item w3-button w3-large'>Opinion</a>" }}
+  {% endif %}
+  {% if site.show-admin_notes %}
+    {{ "<a href='/admin_notes.html' class='w3-bar-item w3-button w3-large'>Admin Notes</a>" }}
+  {% endif %}
+  <a href="/links.html" class="w3-bar-item w3-button w3-large">Links</a>
+</header>
+

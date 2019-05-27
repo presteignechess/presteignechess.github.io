@@ -1,0 +1,50 @@
+.site-header {
+}
+
+.footer-col-wrapper {
+}
+      
+.footer-col footer-col-1 {
+}
+        
+ul.contact-list {
+}
+
+ul class.social-media-list {
+}
+
+.page-heading {
+  padding: 0;
+  margin-top: 6px; }
+
+.page-content {
+  margin-top: 6px;
+  width: 90%;
+  margin-left: 5%;
+  padding: 30px 0; }
+
+.post-list {
+}
+
+.post-meta {
+}
+
+tr {
+  text-align: center;}
+
+.pairings-table, tr, td, th {
+  background-color: #fdfdfd;
+  margin-bottom: 25px;
+  width: 570px;
+  border-collapse: collapse;
+  border: 2px solid silver;}
+
+.pairings-table, th {
+  background-color: silver;
+  margin: 2px;
+  width: 570px;
+  border-collapse: collapse;
+  border: 2px solid silver;
+  text-align: center;}
+
+

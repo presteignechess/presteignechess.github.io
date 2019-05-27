@@ -1,0 +1,41 @@
+---
+layout: default
+---
+
+<div class="w3-container">
+
+  <h2 class="w3-center">Events and Fixtures</h2>
+
+  <table class="w3-table-all w3-centered">
+	<tr>
+	  <th>Status</th>
+    <th>What</th>
+	  <th>When</th>
+	  <th>Where</th>
+	  <th>Time</th>
+	</tr>
+    {% for fixture in site.fixtures %}
+   
+	<tr>
+	  <td>
+			<span> {{ fixture.active | upcase }}</span>
+	  </td>
+
+    <td>
+      {% if fixture.content.size > 1  %}
+        <a href="{{ fixture.url }}"> {{ fixture.title }} </a> 
+      {% else %}
+        {{ fixture.title }} 
+      {% endif %}    
+    </td>
+
+    <td> {{ fixture.when | date_to_string }} </td>
+
+    <td> {{ fixture.place }} </td>
+
+    <td> {{ fixture.when | date: "%H:%M %P" }} </td>
+    </tr>
+    {% endfor %}
+  </table>
+
+</div>

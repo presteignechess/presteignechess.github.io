@@ -1,0 +1,31 @@
+---
+layout: default
+---
+
+<div class="page-content">
+
+  <h2 class="page-heading">List of Members ECF Grades</h2>
+
+  <table>
+	<tr>
+	  <th>Name</th>
+    <th>ECF Reference</th>
+	  <th>ECF grade</th>
+	  <th>ECF RapidPlay</th>		
+	</tr>
+	{% assign sorted =  site.members | sort: 'ecfgrade' | reverse  %}
+	{% for member in sorted %}
+	  <tr>
+	    <td> {{ member.surname }},{{ member.forename }} </td>
+      <td> {{ member.ecfref }} </td>
+		<td> {% if member.ecfgrade %}
+            {{ member.ecfgrade }} 
+         {% else %}
+            {{ "?" }}
+			  {% endif %}
+        </td>
+		<td> {{ member.ecfrapidplay }} </td>
+      </tr>
+	{% endfor %}
+  </table>
+</div>

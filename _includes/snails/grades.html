@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+{% include head.html %}
+
+<body>
+{% include header.html %}
+<main class="page-content" aria-label="Content">   
+<h3>Experimental Snail Grades and Glicko Ratings</h3>
+<p>These grades are experimental and are not to be relied on until more games are played</p>
+<table class="pairings-table">
+<tr>
+<th>Name</th>
+<th>Grade</th>
+<th>Rating(Rd)</th>
+<th>Number of Games</th>
+</tr>
+{% for member in site.data.snailgrades %}
+<tr>
+<td>{{ member.name }}</td>
+<td>{{ member.grade }}</td>
+<td>{{ member.rating }}({{ member.Rd }})</td>
+<td>{{ member.count }}</td>
+</tr>
+{% endfor %}
+</table>
+{{ site.data.update_date.update_date }}
+</main>
+{% include footer.html %}
+</body>
+
+</html>

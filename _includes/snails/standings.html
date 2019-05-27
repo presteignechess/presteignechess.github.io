@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+{% include head.html %}
+
+<body>
+{% include header.html %}
+
+<main class="page-content w3-responsive">
+<table class="pairings-table">
+<tr>
+<th>Name</th>
+<th>One</th>
+{% if page.rounds > 1 %} <th>Two</th> {% endif %}
+{% if page.rounds > 2 %} <th>Three</th> {% endif %}
+{% if page.rounds > 3 %} <th>Four</th> {% endif %}
+{% if page.rounds > 4 %} <th>Five</th> {% endif %}
+{% if page.rounds > 5 %} <th>Six</th> {% endif %}
+{% if page.rounds > 6 %} <th>Seven</th> {% endif %}
+{% if page.rounds > 7 %} <th>Eight</th> {% endif %}
+{% if page.rounds > 8 %} <th>Nine</th> {% endif %}
+{% if page.rounds > 9 %} <th>Ten</th> {% endif %}
+{% if page.rounds > 10 %} <th>Eleven</th> {% endif %}
+{% if page.rounds > 11 %} <th>Twelve</th> {% endif %}
+{% if page.rounds > 12 %} <th>Thirteen</th> {% endif %}
+{% if page.rounds > 13 %} <th>Fourteen</th> {% endif %}
+{% if page.rounds > 14 %} <th>Fifteen</th> {% endif %}
+{% if page.rounds > 15 %} <th>Sixteen</th> {% endif %}
+{% if page.rounds > 16 %} <th>More</th> {% endif %}
+<th>Total</th>
+</tr>
+
+{% for entrant in site.data.snails_2017.standings %}
+    <tr>
+    <td>{{ entrant.name }}({{ entrant.grade }})</td>
+    <td>{{ entrant.score1 }}</td>
+    <td>{{ entrant.score2 }}</td>
+    <td>{{ entrant.score3 }}</td>
+    <td>{{ entrant.score4 }}</td>
+    <td>{{ entrant.score5 }}</td>
+    <td>{{ entrant.score6 }}</td>
+    <td>{{ entrant.score7 }}</td>
+    <td>{{ entrant.score }}</td>
+  </tr>
+{% endfor %}
+
+</table>  
+</main>  
+
+{% include footer.html %}
+</body>
+</html>
