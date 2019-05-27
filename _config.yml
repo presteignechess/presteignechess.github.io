@@ -16,14 +16,12 @@
 
 email: brianjbutcher65@gmail.com
 description: An experimental web site template for a Presteigne Chess Club
-baseurl: "http://presteignechess.club" # the subpath of your site, e.g. /blog
-
-github_username:  BrianBut
+baseurl: "" # the subpath of your site, e.g. /blog
 
 # Chess Club specific variables - set these to values for your club
 
 title: Presteigne Chess Club
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "http://presteignechess.club" # the base hostname & protocol for your site, e.g. http://example.com
 clubname: Presteigne Chess Club
 clubsecretary: Dave Hancock
 secretaryphone:  01544598416
