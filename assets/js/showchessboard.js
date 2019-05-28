@@ -1,4 +1,6 @@
 $(function() {
+  "use strict";
+
   var cfg = {
     pieceTheme: '/assets/img/chesspieces/{piece}.png',
     position: 'start'
@@ -19,12 +21,12 @@ $(function() {
     pgn = todaysgame( data, todaysgameindex(data ) )
     if( game.load_pgn( pgn, options ) ){
       history = game.history();
-      white = document.getElementById("White").innerHTML = game.header().White;
-      black = document.getElementById("Black").innerHTML = game.header().Black;
-      date = document.getElementById("Date").innerHTML = game.header().Date;
+      document.getElementById("White").innerHTML = game.header().White;
+      document.getElementById("Black").innerHTML = game.header().Black;
+      document.getElementById("Date").innerHTML = game.header().Date;
       game.reset();
       i = 0;
-      }
+    }
     else {
       alert( "Error Failed to load pgn.\nPlease notify the webmaster" + todaysdata );
       }
@@ -75,7 +77,7 @@ $(function() {
      $('#nextBtn5').click();
   };
 
-interval = window.setInterval( showmove, 1000 );
+var interval = window.setInterval( showmove, 1200 );
 
 });
 

@@ -1,5 +1,7 @@
 // return gamecount
 function gc( txt ){
+  'use strict';
+
   var lines = txt.split("\n");
 
   var count = 0;
@@ -28,7 +30,7 @@ function todaysgame( txt, gameindex ){
   var gamecount = 0;
   var startchari = 0;
   var endchari = 0;
-  var lines = txt.split(/\r|\n/);
+  var lines = txt.split(/\r|\n/); // Why does this work without parenthesis?
   var pgntext = lines.join('\n');
   var i = 0;
   
@@ -43,8 +45,7 @@ function todaysgame( txt, gameindex ){
     }; 
   }
   
-  //alert( startchari + " , " + endchari + " , " + txt.length );
-  rv = pgntext.substring( startchari, endchari );
+  var rv = pgntext.substring( startchari, endchari );
   //alert( rv );
   return ( rv.trim() );
 }
