@@ -8,7 +8,7 @@ $(function() {
 
   var board = ChessBoard('board1', cfg);
   var game = new Chess();
-  var pgn;
+  //var pgn;
   var history;
   var i;
 
