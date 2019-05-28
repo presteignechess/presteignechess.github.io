@@ -18,7 +18,7 @@ $(function() {
   };
   
   $.get("/pgn/classics.pgn", function(data){
-    if( game.load_pgn( todaysgame( data, todaysgameindex(data ) ), options ) ){
+    if( game.load_pgn( todaysgame( data ), options ) ){
       history = game.history();
       document.getElementById("White").innerHTML = game.header().White;
       document.getElementById("Black").innerHTML = game.header().Black;
