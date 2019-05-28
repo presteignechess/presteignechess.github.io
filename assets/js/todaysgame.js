@@ -3,8 +3,9 @@ function gc( txt ){
   'use strict';
 
   var count = 0;
+  var lines = txt.split("\n");
   for (var i = 0, len = lines.length; i < len; i++) {
-    var l = txt.split("\n").trim();
+    var l = lines[i].trim();
     if( l.endsWith("1-0") || l.endsWith("0-1") || l.endsWith("1/2-1/2") ){ 
       count++; 
     };  // end if
@@ -15,10 +16,7 @@ function gc( txt ){
 
 // return number of todays game in file
 function todaysgameindex( txt ){
-
-    var daynumber = Math.floor( Date.now() / 86400000 ); // days since epoch
-
-    return daynumber % gc( txt );  // id of game in txt
+  return Math.floor( Date.now() / 86400000 ) % gc( txt );  // id of game in txt
 }
 
 
