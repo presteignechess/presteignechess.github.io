@@ -2,11 +2,9 @@
 function gc( txt ){
   'use strict';
 
-  var lines = txt.split("\n");
-
   var count = 0;
   for (var i = 0, len = lines.length; i < len; i++) {
-    var l = lines[i].trim();
+    var l = txt.split("\n").trim();
     if( l.endsWith("1-0") || l.endsWith("0-1") || l.endsWith("1/2-1/2") ){ 
       count++; 
     };  // end if
