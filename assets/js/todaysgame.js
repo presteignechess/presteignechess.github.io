@@ -14,11 +14,6 @@ function gc( txt ){
   return count;
 };
 
-// return number of todays game in file
-//function todaysgameindex( txt ){
-//  return 
-//}
-
 
 // return a substring with todays game only
 function todaysgame( txt ){
@@ -29,7 +24,6 @@ function todaysgame( txt ){
   var endchari = 0;
   var lines = txt.split(/\r|\n/); // Why does this work without parenthesis?
   var pgntext = lines.join('\n');
-  //var i = 0;
   
   // get end position and start position
   for ( var i = 0, len = lines.length; i < len; i++) {
@@ -42,8 +36,6 @@ function todaysgame( txt ){
     }; 
   }
   
-  var rv = pgntext.substring( startchari, endchari );
-  //alert( rv );
-  return ( rv.trim() );
+  return pgntext.slice( startchari, endchari ).trim();
 }
 
