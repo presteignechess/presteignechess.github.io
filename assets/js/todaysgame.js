@@ -55,3 +55,11 @@ function gameresult( txt ){
     return "?";
   }
 }
+
+
+// date formatting - convert YYYY.MM.DD to eg '26 December 1907'
+function longdate( d ){
+  var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+  var date = new Date( d.replace( /\./g, "-" ));
+  return date.getDate() + " " + months[ date.getMonth()] + " " + date.getFullYear();
+}

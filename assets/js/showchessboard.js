@@ -21,7 +21,7 @@ $(function() {
       history = game.history();
       document.getElementById("White").innerHTML = game.header().White;
       document.getElementById("Black").innerHTML = game.header().Black;
-      document.getElementById("Date").innerHTML = game.header().Date;
+      document.getElementById("Date").innerHTML = longdate( game.header().Date );
       document.getElementById("Result").innerHTML = " ( " + gameresult( data ) + " )";
       game.reset();
       i = 0;
