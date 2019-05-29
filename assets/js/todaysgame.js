@@ -29,7 +29,7 @@ function todaysgame( txt ){
   for ( var i = 0, len = lines.length; i < len; i++) {
     endchari += lines[i].length + 1; // don't forget the '\n'
     var l = lines[i].trim();
-    if( l.endsWith("1-0") || l.endsWith("0-1") || l.endsWith("1/2-1/2") ){ 
+    if( l.endsWith("1-0") || l.endsWith("0-1") || l.endsWith("1/2-1/2") || l.endsWith("*") ){ 
       gamecount++;
       if ( gamecount === todaysgameindex ){ break }; 
       startchari = endchari;
@@ -39,3 +39,19 @@ function todaysgame( txt ){
   return pgntext.slice( startchari, endchari ).trim();
 }
 
+
+// return the result of the game
+function gameresult( txt ){
+  var t = txt.trim();
+  if ( t.endsWith("1-0")) {
+    return "1-0";
+  } else if ( t.endsWith("0-1")){
+    return "0-1";
+  } else if ( t.endsWith("1/2-1/2")){
+    return "1/2-1/2";
+  } else if ( t.endsWith("*")){
+    return "1/2-1/2";
+  } else {
+    return "?";
+  }
+}
