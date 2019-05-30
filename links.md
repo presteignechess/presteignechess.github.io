@@ -11,7 +11,6 @@ permalink: /links.html
 
 ### Other nearby Chess Clubs ###
 Many nearby chess clubs have web sites which are hopelessly out of date. These clubs are more up to date.
-* [Hereford Chess Club](http://herefordchessclub.blogspot.com)
 * [Shrewsbury Chess Club](http://www.shrewsburychessclub.org/)
 
 ### Other sites of interest ###
