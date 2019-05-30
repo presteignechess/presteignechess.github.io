@@ -62,7 +62,6 @@ function longdate( d ){
 
   var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
   var da = d.replace( /\./g, "-" ).split("-");
-  alert( da[0] + " " + da[1] + " " + da[2] );
   rv = da[0];
   if ( (! isNaN( da[1]))){
     rv = months[ da[1] - 1 ] + " " + rv;
