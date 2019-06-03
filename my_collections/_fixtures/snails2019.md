@@ -5,6 +5,7 @@ title: "Snails 2019"
 active: proposed
 when: "2019-09-10 7:30"
 place: "The Oak or Brian's House"
+published: false
 ---
 
 ## Snails 2019 - The Club's First Graded Tournament? ##

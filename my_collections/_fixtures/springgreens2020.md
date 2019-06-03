@@ -5,6 +5,7 @@ title: "Spring Greens 2020"
 active: proposed
 when: "2020-10-31 10:00"
 place: "Court of Noke"
+published: false
 ---
 
 ## Chess for Everyone ##
