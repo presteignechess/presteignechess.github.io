@@ -15,6 +15,11 @@ function gc( txt ){
 };
 
 
+function todaysgameindex( txt ){
+  return ( Math.floor( Date.now() / 86400000 ) % gc( txt )); 
+}
+
+
 // return a substring with todays game only
 function todaysgame( txt ){
 
@@ -30,9 +35,9 @@ function todaysgame( txt ){
     endchari += lines[i].length + 1; // don't forget the '\n'
     var l = lines[i].trim();
     if( l.endsWith("1-0") || l.endsWith("0-1") || l.endsWith("1/2-1/2") || l.endsWith("*") ){ 
-      gamecount++;
       if ( gamecount === todaysgameindex ){ break }; 
       startchari = endchari;
+      gamecount++;
     }; 
   }
   

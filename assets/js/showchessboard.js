@@ -27,7 +27,7 @@ $(function() {
       i = 0;
     }
     else {
-      alert( "Error Failed to load pgn.\nPlease notify the webmaster" + todaysdata );
+      alert( "Error Failed to load pgn.\nPlease notify the webmaster" + todaysgame( data ) + " [ " + todaysgameindex( data ) + " ]" );
       }
     });  
 
