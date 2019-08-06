@@ -20,12 +20,12 @@ baseurl: "" # the subpath of your site, e.g. /blog
 
 # Chess Club specific variables - set these to values for your club
 
-title: Presteigne Chess Club
-url: "http://presteignechess.club" # the base hostname & protocol for your site, e.g. http://example.com
-clubname: Presteigne Chess Club
-clubsecretary: Dave Hancock
-secretaryphone:  01544598416
-secretaryemail: 
+title: Marches Chess League
+#url: "http://presteignechess.club" # the base hostname & protocol for your site, e.g. http://example.com
+clubname: Marches Chess League
+clubsecretary: Lee Davis
+secretaryphone:  
+secretaryemail: sea.devil@btinternet.com
 webmaster: brianjbutcher65@gmail.com
 
 # Menu bar display options - true is you want item displayed on menu bar
@@ -33,13 +33,13 @@ show-features: false
 show-fixtures: true
 show-members: false
 show-opinion: false
-show-admin_notes: true
+show-admin_notes: false
 
 # Homepage - club specific values
-regular-meeting-info: We meet on Tuesday evenings at the Royal Oak in Presteigne
-venue-link: ""
-venue-picture: "assets/img/oak.jpg"
-display-pgn-file: "pgn/classics.pgn" # FIXME This cannot be changed 
+regular-meeting-info: We are attempting to get a Chess League going covering 
+venue-link: https://commons.wikimedia.org/wiki/File:Ludlow_Castle_from_Whitcliffe,_2011.jpg
+venue-picture: "https://upload.wikimedia.org/wikipedia/commons/5/54/Ludlow_Castle_from_Whitcliffe%2C_2011.jpg"
+#display-pgn-file: "pgn/classics.pgn" # FIXME This cannot be changed 
 
 # The rest of this file concerns site structure - you are unlikely to want to change it
 collections_dir: my_collections
@@ -50,13 +50,13 @@ collections:
     output: true
 
   features:
-    output: true
+    output: false
 
   fixtures:
     output: true
 
   members:
-    output: true
+    output: false
 
   opinion:
     output: true
@@ -65,7 +65,7 @@ collections:
     output: true
 
   pgn:
-    output: true
+    output: false
   
 # Build settings
 markdown: kramdown
